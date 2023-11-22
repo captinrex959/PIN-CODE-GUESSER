@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Pin Code Guesser</title>
+    <script>
+      window.addEventListener("keydown", (event) =>{
+        if(event.key == "r") {
+            var rand = Math.random();
+            var pin = Math.round(1000 + (rand * 8999));
+            document.getElementById("pin").textContent = `Pin: ${pin}`;
+        } else {
+          console.log("ignoring ", event.key)
+        }
+      });
+    </script>
+  </head>
+  <body>
+   <h2>click the R key to relode the pin Guesser </h2>
+   <h2 id="pin"></h2>
+  </body>
+</html>
